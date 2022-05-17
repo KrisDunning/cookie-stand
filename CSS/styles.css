@@ -1,1 +1,36 @@
+*{
+  scroll-behavior: smooth;
+  background-color: salmon;
+}
 
+.data{
+  font-family: Arial, Helvetica, sans-serif;
+  color: darkblue;
+}
+.text{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color:darkslateblue;
+}
+.highlight{
+  font-family: 'Tangerine', serif;
+  color:firebrick;
+}
+h1{
+  font-size: 48px; 
+  text-shadow: 3px;
+}
+h2{
+  /* color:darkblue; only testing for color palette match */
+}
+ul:last-child{
+  /* color: darkslateblue; only testing for color palette match */
+}
+
+
+td{
+  max-width: 200px;
+  border:3px solid black;
+  height: auto;
+  word-wrap:break-word;
+  column-span: all;
+}
