@@ -42,6 +42,32 @@ function setTableHeader(){
   celltoAppend.textContent='Store Daily Total Sales';
 }
 
+function setTableFooter(){
+  let hourlySalesCombined=[0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+  let footerRow = document.createElement('tr');
+  tableToAppendTo.appendChild(footerRow);
+  let celltoAppend = document.createElement('th');
+  footerRow.appendChild(celltoAppend);
+  celltoAppend.textContent="Totals";
+
+  for (let i=0;i<storeCollection.length;i++){
+    for (let j=0;j<hours.length;j++){
+      hourlySalesCombined[j]= parseInt(hourlySalesCombined[j])+ parseInt(storeCollection[i].cookiesSalesPerHour[j]);
+      console.log(hourlySalesCombined[j]);
+      console.log(storeCollection[i].cookiesSalesPerHour[j]);
+    }
+  } 
+  for (let k=0;k<hourlySalesCombined.length;k++){
+      celltoAppend = document.createElement('th');
+      footerRow.appendChild(celltoAppend);
+      celltoAppend.textContent=hourlySalesCombined[k];
+      console.log ("Cell content:" +hourlySalesCombined[k]);
+  }
+  celltoAppend = document.createElement('th');
+  footerRow.appendChild(celltoAppend);
+  celltoAppend.textContent=getTotalCookieSales(hourlySalesCombined);
+}
+
 // OBJECT CONSTRUCTOR
 function Store(name,minCustPerHour,maxCustPerHour,avgCookiesPerCust){
   this.name = name;
@@ -65,7 +91,7 @@ Store.prototype.render = function (){
     celltoAppend.textContent = this.cookiesSalesPerHour[i];
     storeRow.appendChild(celltoAppend);
   }  
-  celltoAppend = document.createElement('td');
+  celltoAppend = document.createElement('th');
   celltoAppend.textContent = this.cookiesSoldTotal;
   storeRow.appendChild(celltoAppend);
 }
@@ -94,3 +120,6 @@ function renderStoreCollection(){
 setTableHeader();
 inititalizeStoreCollection();
 renderStoreCollection();
+console.log(storeCollection);
+console.log(hours.length);
+setTableFooter();
