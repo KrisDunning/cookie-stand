@@ -36,7 +36,7 @@ function setTableHeader(){
     celltoAppend = document.createElement('th');
     headerRow.appendChild(celltoAppend);
     celltoAppend.textContent=hours[i];
-  }
+  } 
   celltoAppend = document.createElement('th');
   headerRow.appendChild(celltoAppend);
   celltoAppend.textContent='Store Daily Total Sales';
