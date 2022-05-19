@@ -13,10 +13,18 @@
   font-family: Georgia, 'Times New Roman', Times, serif;
   color:darkslateblue;
 }
+p{
+  font-size: 18px;
+  word-spacing: 2px;
+}
 
 .highlight{
   font-family: 'Tangerine', serif;
   color:firebrick;
+}
+
+a{
+  margin-left: 40px;
 }
 
 #homePageBanner{
@@ -140,12 +148,59 @@ article{
 #whereWeAre p{
   max-width:50%;
   justify-self: center;
+  align-self: center;
 }
 
-
-ul:last-child{
-  /* color: darkslateblue; only testing for color palette match */
+#storeLocations, #storeLocations2{
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 100px;
 }
+
+#storeLocations h3, #storeLocations2 h3{
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+#storeLocations img, #storeLocations2 img{
+  justify-self:  center;
+  max-height:250px;
+  max-width:  250px;
+  margin-bottom: 20px;
+  border: 3px double rgb(175, 75, 4);
+  border-radius: 50%;
+}
+
+#footer{
+  display:flex;
+  height: 175px;
+  justify-content: space-evenly;
+  background-color: firebrick;
+}
+
+#footer img{
+  max-height: 125px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 3px solid rgb(78, 35, 4);
+}
+
+#footer p{
+  background-color: firebrick;
+  align-self: center;
+  text-align: center;
+  font-size: 24px;
+  line-height: 1.5;
+}
+/* +++++++ SALES.HTML BELOW ++++++++++++ */
+
+#salesHeader{
+  margin-top: 40px;
+}
+
 
 table{
   margin: 15px 45px;
