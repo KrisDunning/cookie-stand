@@ -1,6 +1,7 @@
 *{
   scroll-behavior: smooth;
-  background-color: salmon;
+  background-color:tan;
+  border: 1px solid black;
 }
 
 .data{
@@ -12,10 +13,52 @@
   font-family: Georgia, 'Times New Roman', Times, serif;
   color:darkslateblue;
 }
+p{
+  font-size: 18px;
+  word-spacing: 2px;
+}
 
 .highlight{
   font-family: 'Tangerine', serif;
   color:firebrick;
+}
+
+a{
+  margin-left: 40px;
+}
+
+#homePageBanner{
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+}
+#logoImage{
+  margin-left: 30px;
+  height:200px;
+  width:600px;
+}
+
+#pats{
+  margin-left: auto;
+  padding-right: 10px;
+  font-size: 180px;
+  font-weight: 900;
+  text-shadow: 4px 2px 4px #666;
+}
+
+#salmonCookies{
+  margin: 15px 75px 0px 0px;
+  font-size: 128px;
+  font-weight: 600;
+  text-shadow: 4px 2px 4px #666;
+}
+
+hr{
+  width:95%;
+  /* border:6px solid rgb(204, 61, 0); */
+  border:6px double rgb(175, 75, 4);
+  border-radius: 15%;
+  box-shadow: 2px 2px 2px #666;
 }
 
 h1{
@@ -24,13 +67,140 @@ h1{
   text-align: center;
 }
 
-h2{
-  /* color:darkblue; only testing for color palette match */
+article{
+  margin: 25px 15px 150px;
 }
 
-ul:last-child{
-  /* color: darkslateblue; only testing for color palette match */
+#art1H2{
+  margin: 50px auto;
+  text-align: center;
+  text-decoration: 2px double underline rgb(175, 75, 4);
+  text-underline-offset: 15px;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 64px;
 }
+
+#whatWeDo{
+  display:flex;
+  justify-content: space-around;
+  padding: 5px 30px;
+}
+#whatWeDo img{
+  height:auto;
+  max-width:300px;
+  border:3px double rgb(175, 75, 4);
+  border-radius: 15%;
+}
+#whatWeDo p{
+  max-width:50%;
+  justify-self: center;
+}
+
+#art2H2{
+  margin: 50px auto;
+  text-align: center;
+  text-decoration: 2px double underline rgb(175, 75, 4);
+  text-underline-offset: 15px;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 64px;
+}
+
+#whoWeAre{
+  display:flex;
+  justify-content: space-around;
+  padding: 5px 30px;
+}
+
+#whoWeAre img{
+  height:auto;
+  max-width:300px;
+  border:3px double rgb(175, 75, 4);
+  border-radius: 15%;
+}
+
+#whoWeAre p{
+  max-width:50%;
+  justify-self: center;
+}
+
+#art3H2{
+  margin: 50px auto;
+  text-align: center;
+  text-decoration: 2px double underline rgb(175, 75, 4);
+  text-underline-offset: 15px;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 64px;
+}
+
+#whereWeAre{
+  display:flex;
+  justify-content: space-around;
+  padding: 5px 30px;
+}
+
+#whereWeAre img{
+  height:auto;
+  max-width:300px;
+  border:3px double rgb(175, 75, 4);
+  border-radius: 15%;
+}
+
+#whereWeAre p{
+  max-width:50%;
+  justify-self: center;
+  align-self: center;
+}
+
+#storeLocations, #storeLocations2{
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 100px;
+}
+
+#storeLocations h3, #storeLocations2 h3{
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+#storeLocations img, #storeLocations2 img{
+  justify-self:  center;
+  max-height:250px;
+  max-width:  250px;
+  margin-bottom: 20px;
+  border: 3px double rgb(175, 75, 4);
+  border-radius: 50%;
+}
+
+#footer{
+  display:flex;
+  height: 175px;
+  justify-content: space-evenly;
+  background-color: firebrick;
+}
+
+#footer img{
+  max-height: 125px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 3px solid rgb(78, 35, 4);
+}
+
+#footer p{
+  background-color: firebrick;
+  align-self: center;
+  text-align: center;
+  font-size: 24px;
+  line-height: 1.5;
+}
+/* +++++++ SALES.HTML BELOW ++++++++++++ */
+
+#salesHeader{
+  margin-top: 40px;
+}
+
 
 table{
   margin: 15px 45px;
@@ -44,4 +214,8 @@ th, td{
   word-wrap:break-word;
   column-span: all;
 
+}
+
+th {
+  color:darkblue;
 }
