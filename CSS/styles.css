@@ -1,16 +1,15 @@
 *{
   scroll-behavior: smooth;
   background-color:tan;
-  border: 1px solid black;
 }
 
 .data{
   font-family: Arial, Helvetica, sans-serif;
-  color: darkblue;
+  color: rgb(84, 84, 229);
 }
 
-.text{
-  font-family: Georgia, 'Times New Roman', Times, serif;
+.h2Text{
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   color:darkslateblue;
 }
 p{
@@ -21,10 +20,6 @@ p{
 .highlight{
   font-family: 'Tangerine', serif;
   color:firebrick;
-}
-
-a{
-  margin-left: 40px;
 }
 
 #homePageBanner{
@@ -76,7 +71,6 @@ article{
   text-align: center;
   text-decoration: 2px double underline rgb(175, 75, 4);
   text-underline-offset: 15px;
-  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-size: 64px;
 }
 
@@ -101,7 +95,6 @@ article{
   text-align: center;
   text-decoration: 2px double underline rgb(175, 75, 4);
   text-underline-offset: 15px;
-  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-size: 64px;
 }
 
@@ -128,7 +121,6 @@ article{
   text-align: center;
   text-decoration: 2px double underline rgb(175, 75, 4);
   text-underline-offset: 15px;
-  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-size: 64px;
 }
 
@@ -170,6 +162,7 @@ article{
   max-height:250px;
   max-width:  250px;
   margin-bottom: 20px;
+  margin-left: 25px;
   border: 3px double rgb(175, 75, 4);
   border-radius: 50%;
 }
@@ -179,6 +172,7 @@ article{
   height: 175px;
   justify-content: space-evenly;
   background-color: firebrick;
+  border-top: 3px solid rgb(78, 35, 4);
 }
 
 #footer img{
@@ -195,10 +189,44 @@ article{
   font-size: 24px;
   line-height: 1.5;
 }
+
+#footer a{
+  margin-top: 10px;
+  padding:3px;
+  height: 35px;
+  background-color: rgb(193, 98, 31);
+  color: black;
+  border: 3px double rgb(78, 35, 4);
+  text-decoration: none;
+}
+
+#footer a:focus, #footer a:hover
+{
+  background-color: rgb(253, 97, 53);
+}
+
+
 /* +++++++ SALES.HTML BELOW ++++++++++++ */
 
 #salesHeader{
   margin-top: 40px;
+}
+#salesHeader h1{
+  font-size: 64px;
+}
+
+#salesHeader a{
+  margin-top: 10px;
+  margin-left: 40px;
+  padding:3px;
+  height: 35px;
+  background-color: rgb(193, 98, 31);
+  color: black;
+  border: 3px double rgb(78, 35, 4);
+  text-decoration: none;
+}
+#salesHeader a:hover, #saleHeader:focus{
+  background-color: rgb(253, 97, 53);
 }
 
 
@@ -218,4 +246,49 @@ th, td{
 
 th {
   color:darkblue;
+  background-color: rgb(208, 142, 84);
+  text-transform: capitalize;
+}
+form{
+  display: flex;
+}
+fieldset{
+  display:flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border: 3px solid firebrick;
+  background-color: rgb(216, 134, 76);
+  width: 30%;
+  margin: 10px 40px;
+}
+legend{
+  border: 3px solid firebrick;
+  font-size: 24px;
+  font-weight: 700;
+}
+fieldset >*{
+  margin:3px;
+  padding: 5px;
+  background-color: rgb(216, 134, 76);
+}
+fieldset label, input{
+  margin-left: 30px;
+  font-weight: 700;
+}
+
+fieldset input{
+  border:3px solid black;
+  border-radius: 7px;
+}
+button{
+  margin :40px;
+  height: 100px;
+  background-color: rgb(216, 134, 76);
+  border: 3px firebrick solid;
+}
+fieldset input:hover, button:hover{
+  background-color: rgb(253, 97, 53);
+}
+fieldset input:focus, button:focus{
+  background-color: rgb(253, 97, 53);
 }
