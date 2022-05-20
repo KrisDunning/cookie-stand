@@ -1,26 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="CSS/reset.css">
+  <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
-  <link rel="stylesheet" href="CSS/styles.css">
-  <title>Pat's Salmon Cookies</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <title>Pat's Salmon Cookies Store Sales</title>
 </head>
+
 <body>
   <header id="salesHeader">
-    <h1 class="highlight">Pat's Salmon Cookie Stand Sales Data</h1>
+    <a href="index.html">Click Here to Return To Home Page</a>
+    <h1 class="highlight">Pat's Salmon Cookie Store Sales Data</h1>
     <hr>
   </header>
-  <a href="index.html">Click Here to Return To Home Page</a>
 
   <section id="salesInformation">
     <table id="salesTable"></table>
   </section>
 
+  <section>
+    <form id="addNewStore">
+      <fieldset>
+        <legend> Add a New Store </legend>
+        <label for="storeName">Store Name : </label>
+        <input type="text" id="storeName" name="storeName" maxlength="20" required>
 
-  <script src="JS/app.js"></script>
+        <label for="avgCookiesPerCust">Average Cookies Per Customer : </label>
+        <input type="number" id="avgCookiesPerCust" name="avgCookiesPerCust" step="0.1" min="0" maxlength="4" required>
+
+        <label for="minCustPerHour">Minimum Customer Per Hour : </label>
+        <input type="number" id="minCustPerHour" name="minCustPerHour" min="0" maxlength="4" required>
+
+        <label for="maxCustPerHour">Maximum Customer Per Hour : </label>
+        <input type="number" id="maxCustPerHour" name="maxCustPerHour" min="0" maxlength="4" required>
+      </fieldset>
+      <button type="submit">Add New Store To Table</button>
+    </form>
+  </section>
+
+  <script src="js/app.js"></script>
 </body>
 </html>
