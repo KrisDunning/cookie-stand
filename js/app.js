@@ -39,30 +39,29 @@ function getTotalCookieSales(hourlySales){
   }
   return total;
 }
+// Core Functionality Function creates a child,fills with content(if supplied),appends child to parent
+function createAppendChild(parent,childElementType,elementContent){
+ elementContent=elementContent||'';
+ let childVar=document.createElement(childElementType);
+ childVar.textContent=elementContent;
+ parent.appendChild(childVar);
+return childVar;
+}
 
 function setTableHeader(){
-  let headerRow = document.createElement('tr');
-  tableToAppendTo.appendChild(headerRow);
-  let celltoAppend = document.createElement('th');
-  headerRow.appendChild(celltoAppend);
-  celltoAppend.textContent='Store Locations';
+  let childRow=createAppendChild(tableToAppendTo,'tr');
+  createAppendChild(childRow,'th','Store Locations')
   for (let i=0; i<hours.length;i++){
-    celltoAppend = document.createElement('th');
-    headerRow.appendChild(celltoAppend);
-    celltoAppend.textContent=hours[i];
+    createAppendChild(childRow,'th',hours[i].toString());
   } 
-  celltoAppend = document.createElement('th');
-  headerRow.appendChild(celltoAppend);
-  celltoAppend.textContent='Store Daily Total Sales';
+  createAppendChild(childRow,'th','Store Daily Total Sales');
 }
 
 function setTableFooter(){
   let hourlySalesCombined=[];
-  let footerRow = document.createElement('tr');
-  tableToAppendTo.appendChild(footerRow);
-  let celltoAppend = document.createElement('th');
-  footerRow.appendChild(celltoAppend);
-  celltoAppend.textContent="Hourly Combined Totals";
+  let foot=createAppendChild(tableToAppendTo,'tfoot');
+  let footerRow=createAppendChild(foot,'tr');
+  createAppendChild(footerRow,'th','Hourly Combined Totals');
   for (let j=0;j<hours.length;j++){
       let sum=0;
     for (let i=0;i<storeCollection.length;i++){
@@ -71,13 +70,9 @@ function setTableFooter(){
     }
   } 
   for (let k=0;k<hourlySalesCombined.length;k++){
-    celltoAppend = document.createElement('th');
-    footerRow.appendChild(celltoAppend);
-    celltoAppend.textContent=hourlySalesCombined[k];
+    createAppendChild(footerRow,'th',hourlySalesCombined[k].toString());
   }
-  celltoAppend = document.createElement('th');
-  footerRow.appendChild(celltoAppend);
-  celltoAppend.textContent=getTotalCookieSales(hourlySalesCombined);
+  createAppendChild(footerRow,'th',getTotalCookieSales(hourlySalesCombined),toString());
 }
 
 // OBJECT CONSTRUCTOR
@@ -92,21 +87,13 @@ function Store(name,minCustPerHour,maxCustPerHour,avgCookiesPerCust){
 }
 // METHODS
 Store.prototype.render = function (){
-  let storeRow = document.createElement('tr');
+  let storeRow=createAppendChild(tableToAppendTo,'tr');
   storeRow.classList.add("data")
-  tableToAppendTo.appendChild(storeRow);
-  let celltoAppend = document.createElement('th');
-  storeRow.appendChild(celltoAppend);
-  celltoAppend.textContent=this.name;
-
+  createAppendChild(storeRow,'th',this.name.toString());
   for (let i=0;i<this.cookiesSalesPerHour.length;i++){
-    celltoAppend = document.createElement('td');
-    celltoAppend.textContent = this.cookiesSalesPerHour[i];
-    storeRow.appendChild(celltoAppend);
+    createAppendChild(storeRow,'td',this.cookiesSalesPerHour[i].toString());
   }  
-  celltoAppend = document.createElement('th');
-  celltoAppend.textContent = this.cookiesSoldTotal;
-  storeRow.appendChild(celltoAppend);
+  createAppendChild(storeRow,'th',this.cookiesSoldTotal.toString());
 }
 
 setTableHeader();
@@ -135,3 +122,4 @@ function handleSubmit(event){
   addNewStoreForm.reset();
 }
 addNewStoreForm.addEventListener('submit',handleSubmit);
+//++++++++++++++++++++++++++++++++++++++++++++++++++++//
