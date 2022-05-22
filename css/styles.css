@@ -244,7 +244,7 @@ th, td{
 
 }
 
-th {
+th{
   color:darkblue;
   background-color: rgb(208, 142, 84);
   text-transform: capitalize;
